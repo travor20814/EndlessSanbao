@@ -24,6 +24,7 @@ import {
 import MainBoard from './containers/MainBoard.jsx';
 
 // Reducers
+import Game from './reducers/game.js';
 
 // Debug mode
 if (process.env.NODE_ENV !== 'production') {
@@ -34,6 +35,7 @@ const history = createBrowserHistory();
 
 export const store = createStore(
   combineReducers({
+    Game,
     routing: routerReducer,
   }),
   {},

@@ -2,39 +2,34 @@ import React, {
   Component,
 } from 'react';
 import { StyleRoot } from 'radium';
-import T from 'prop-types';
+
+import GameBoard from './GameBoard.jsx';
 
 const styles = {
   wrapper: {
-
+    width: '100%',
+    height: '100vh',
   },
   mainWrapper: {
-
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'black',
   },
 };
 
 class MainBoard extends Component {
   render() {
-    const {
-      children,
-    } = this.props;
-
     return (
       <StyleRoot style={styles.wrapper}>
         <main style={styles.mainWrapper}>
-          {children}
+          <GameBoard />
         </main>
       </StyleRoot>
     );
   }
 }
-
-MainBoard.propTypes = {
-  children: T.node,
-};
-
-MainBoard.defaultProps = {
-  children: null,
-};
 
 export default MainBoard;
